@@ -32,7 +32,7 @@ namespace Portfolyo.Controllers
 
 		public IActionResult DeleteExperience(int id)
 		{
-			var value = context.Experiences.Find(id); // id'ye gööre bul
+			var value = context.Experiences.Find(id); // id'ye göre bul
 			context.Experiences.Remove(value); // value'dan gelen değeri sil
 			context.SaveChanges(); // Veritabanına değişiklikleri kaydet
 			return RedirectToAction("ExperienceList"); // ExperienceList metdouna yönlendir

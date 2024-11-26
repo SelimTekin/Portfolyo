@@ -21,8 +21,8 @@ namespace Portfolyo.Controllers
 
         [HttpPost]
         public IActionResult CreateToDoList(ToDoList toDoList) {
-            toDoList.Status = false;
-            context.ToDoLists.Add(toDoList);
+            toDoList.Status = false; // Eklerken Status'un false olmasını isityoruz. Dolayısıyla Status'u ekleme yapmadan önce belirliyoruz.
+			context.ToDoLists.Add(toDoList);
             context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -11,7 +11,7 @@ namespace Portfolyo.DAL.Context
             optionsBuilder.UseSqlServer("Server=SELIM\\SQLEXPRESS;initial Catalog=PortfolioDb;integrated Security=true");
         }
 
-        public DbSet<About> Abouts { get; set; }
+        public DbSet<About> Abouts { get; set; } // <About> -> Entities klasöründeki Class / Abouts -> DB Table
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Feature> Features { get; set; }

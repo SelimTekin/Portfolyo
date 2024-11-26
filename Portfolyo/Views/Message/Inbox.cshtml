@@ -37,7 +37,7 @@
 										<td>@item.NameSurname</td>
 										<td>@item.Subject</td>
 										<td>@item.SendDate.ToShortDateString()</td>
-										<td><a href="/Message/MessageDetail/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td> <!-- Message controller'ındaki DeleteMessage metoduna id parametresi gönder' -->
+										<td><a href="/Message/MessageDetail/@item.MessageId" class="btn btn-warning">Mesajı Aç</a></td>
 										@if(item.IsRead == true)
 										{
 											<td><a href="/Message/ChangeIsReadToFalse/@item.MessageId" class="btn btn-dark">Okunmadı Olarak Değiştir</a></td>
@@ -46,7 +46,7 @@
 										{
 											<td><a href="/Message/ChangeIsReadToTrue/@item.MessageId" class="btn btn-info">Okundu Olarak Değiştir</a></td>
 										}
-										<td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
+										<td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td> <!-- Message controller'ındaki DeleteMessage metoduna id parametresi gönder' -->
 									</tr>
 								}
 							</tbody>
